@@ -31,6 +31,13 @@ function readLine() {
  *  2. INTEGER_ARRAY b
  */
 
+// For all those guys like me who found this question difficult to understand, here's the simple explanation i got after searching for decades.
+
+// 1. Find LCM of the first array a. 2.Find GCD / HCF of the second array b. 3.Find all the multiples of LCM up to GCD, which divides the GCD evenly.
+
+// For Example: Here, In the given sample Input, The LCM of array a would be 4 and the GCD of the array b would be 16. Now, Find all Multiples of 4,(like 4,8,12,16,...) upto 16, such that, (16%multiple_of_4_here) should be 0. Here, 16%4=0 -----> count=1 (suppose this variable.) 16%8=0 -----> count=2 16%12!=0 ---> count=2 16%16=0 ---> count=3.
+
+// Thus, The answer is 3. Hope this helped you.
 function getTotalX(a, b) {
     // Write your code here
 
