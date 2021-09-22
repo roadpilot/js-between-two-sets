@@ -39,8 +39,15 @@ function readLine() {
 
 // Thus, The answer is 3. Hope this helped you.
 function getTotalX(a, b) {
-    // Write your code here
-
+    let c = 0 // start counter at 0
+    
+    for (let x = 1; x <= (Math.max(...b)); x++) {
+        if (a.every(int => (x % int == 0)) && b.every(int => (int % x == 0))) {
+            c++ // increment counter if any element of a is also a factor of any element of b
+        }
+    }
+    return c
+}
 }
 
 function main() {
